@@ -13,5 +13,3 @@ def sum(*args):
 def my_func(**kwargs):
     for i, j in kwargs.items():
         print(i, j)
- 
-my_func(name='tim', sport='football', roll=19)
