@@ -286,8 +286,7 @@ In binary 4 is 100
 >>> "Sam had {hats} hats and {mats} mats".format(**d)
 Sam had 122 hats and 42 mats
 
->>> 'Sam has {red} red balls, {green} yellow balls \
-and {0} bats'.format(3, red = 12, green = 31)
+>>> 'Sam has {red} red balls, {green} yellow balls and {0} bats'.format(3, red = 12, green = 31)
 Sam has 12 red balls, 31 yellow balls and 3 bats
 ```
 
