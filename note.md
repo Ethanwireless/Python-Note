@@ -209,8 +209,8 @@ SYMBOL | DESCRIPTION
 [0-9] | match a single character in the range 0-9
 ^ | match start at beginning of the string
 $ | match start at end of the string
-+ | matches one or more of the preceding character (greedy match).
-* | matches zero or more of the preceding character (greedy match).
+\+ | matches one or more of the preceding character (greedy match).
+\* | matches zero or more of the preceding character (greedy match).
 
 example:
 
