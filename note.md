@@ -167,5 +167,79 @@ my_three(**a)
 
 ## Python Regular Expression
 
+#### `re.search()` Method
+
+`re.search()` is used to find the first match for the pattern in the string.
+
+**Syntax:** `re.search(pattern, string, flags[optional])`
+
+`re.search()` method accepts pattern and string and returns a `match object` on success or `None`  if no match is found. `match object`  has `group()`  method which contains the matching text in the string.
+
+You must specify the pattern using **raw strings** i.e prepending string with r like this.
+
+```python
+r'this \n'.
+```
+example:
+
+```python
+>>> import re
+>>> s = "my number is 123"
+>>> match = re.search(r'\d\d\d', s)
+>>> match
+<_sre.SRE_Match object; span=(13, 16), match='123'>
+>>> match.group()
+'123'
+```
+
+#### Basic patterns used in regular expression
+SYMBOL | DESCRIPTION
+--- | ---
+. | dot matches any character except newline
+\w | matches any word character i.e letters, alphanumeric, digits and underscore ( _ )
+\W | matches non word characters
+\d | matches a single digit
+\D | matches a single character that is not a digit
+\s | matches any white-spaces character like \n, \t, spaces
+\S | matches single non white space character
+[abc] | matches single character in the set i.e either match a, b or c
+[\^abc] | match a single character other than a, b and c
+[a-z] | match a single character in the range a to z.
+[a-zA-Z] | match a single character in the range a-z or A-Z
+[0-9] | match a single character in the range 0-9
+^ | match start at beginning of the string
+$ | match start at end of the string
++ | matches one or more of the preceding character (greedy match).
+* | matches zero or more of the preceding character (greedy match).
+
+example:
+
+```python
+import re
+s = "tim email is tim@somehost.com"
+match = re.search(r'[\w.-]+@[\w.-]+', s)
+ 
+# the above regular expression will match a email address
+ 
+if match:
+    print(match.group())
+else:
+    print("match not found")
+```
+
+#### Group capturing
+
+```python
+import re
+s = "tim email is tim@somehost.com"
+match = re.search('([\w.-]+)@([\w.-]+)', s)
+if match:
+    print(match.group()) ## tim@somehost.com (the whole match)
+    print(match.group(1)) ## tim (the username, group 1)
+    print(match.group(2)) ## somehost (the host, group 2)
+```
+
+## What is `if __name__ == “__main__”` ??
+Every module in python has a special attribute called `__name__`. The value of `___name__`  attribute is set to `'__main__'`  when module run as main program. Otherwise the value of `__name\__` is set to contain the name of the module.
 
 
