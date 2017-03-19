@@ -240,6 +240,54 @@ if match:
 ```
 
 ## What is `if __name__ == “__main__”` ??
-Every module in python has a special attribute called `__name__`. The value of `___name__`  attribute is set to `'__main__'`  when module run as main program. Otherwise the value of `__name\__` is set to contain the name of the module.
+Every module in python has a special attribute called `__name__`. The value of `___name__`  attribute is set to `'__main__'`  when module run as main program. Otherwise the value of `__name__` is set to contain the name of the module.
+
+## Python Lambda Function
+
+```python
+>>> r = lambda x, y: x * y
+>>> r(12, 3)   # call the lambda function
+36
+```
+or
+`(lambda x, y: x * y)(3,4)`
+
+## Python String Formatting
+
+**Syntax:** `template.format(p1, p1, .... , k1=v1, k2=v2)`
+**Syntax:** `{[argument_index_or_keyword]:[width][.precision][type]}`
+
+`type`  can be used with format codes
+
+FORMAT CODES | DESCRIPTION
+--- | ---
+d | for integers
+f | for floating point numbers
+b | for binary numbers
+o | for octal numbers
+x | for octal hexadecimal numbers
+s | for string
+e | for floating point in exponent format
+
+example:
+
+```python
+>>> "Floating point {0:.2f}".format(345.7916732)
+Floating point 345.79
+
+>>> "In binary 4 is {0:b}".format(4) # b for binary
+In binary 4 is 100
+
+>>> array = [34, 66, 12]
+>>> "A = {0}, B = {1}, C = {2}".format(*array)
+'A = 34, B = 66, C = 12'
+
+>>> d = {'hats' : 122, 'mats' : 42}
+>>> "Sam had {hats} hats and {mats} mats".format(**d)
+Sam had 122 hats and 42 mats
+
+>>> 'Sam has {red} red balls, {green} yellow balls \
+and {0} bats'.format(3, red = 12, green = 31)
+```
 
 
