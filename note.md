@@ -2,7 +2,7 @@
 
 ## Python Strings
 
-#### ord() and chr() Functions
+### ord() and chr() Functions
 
 **ord()** – function returns the ASCII code of the character.
 **chr()** – function returns character represented by a ASCII number.
@@ -17,7 +17,7 @@
 65
 ```
 
-#### ```in```  and ```not in```  operators
+### ```in```  and ```not in```  operators
 
 You can use ```in``` and ```not in```  operators to check existence of string in another string. They are also known as membership operator.
 
@@ -29,7 +29,7 @@ True
 False
 ```
 
-#### Testing strings
+### Testing strings
 
 METHOD NAME	 | METHOD DESCRIPTION
 ------------- | --------------
@@ -41,7 +41,7 @@ islower()	| Returns True if string is in lowercase
 isupper()	| Returns True if string is in uppercase
 isspace()	| Returns True if string contains only whitespace
 
-#### Commonly used list methods with return type
+### Commonly used list methods with return type
 
 METHOD | NAME	DESCRIPTION
 ---|---
@@ -117,7 +117,7 @@ Circle with radius 9
 
 code ```super()``` method in derived class is used to call method of the base class
 
-####isinstance() function
+### isinstance() function
 
 `isinstance()`  function is used to determine whether the object is an instance of the class or not.
 **Syntax:** `isinstance(object, class_type)`
@@ -167,7 +167,7 @@ my_three(**a)
 
 ## Python Regular Expression
 
-#### `re.search()` Method
+### `re.search()` Method
 
 `re.search()` is used to find the first match for the pattern in the string.
 
@@ -192,7 +192,7 @@ example:
 '123'
 ```
 
-#### Basic patterns used in regular expression
+### Basic patterns used in regular expression
 SYMBOL | DESCRIPTION
 --- | ---
 . | dot matches any character except newline
@@ -227,7 +227,7 @@ else:
     print("match not found")
 ```
 
-#### Group capturing
+### Group capturing
 
 ```python
 import re
@@ -288,6 +288,6 @@ Sam had 122 hats and 42 mats
 
 >>> 'Sam has {red} red balls, {green} yellow balls \
 and {0} bats'.format(3, red = 12, green = 31)
+Sam has 12 red balls, 31 yellow balls and 3 bats
 ```
-
 
