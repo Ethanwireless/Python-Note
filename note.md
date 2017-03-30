@@ -290,3 +290,13 @@ Sam had 122 hats and 42 mats
 Sam has 12 red balls, 31 yellow balls and 3 bats
 ```
 
+## virtualenv
+
+```sh
+$ cd myproject/
+$ virtualenv --no-site-packages venv
+$ source venv/bin/activate
+$ deactivate
+```
+
+
